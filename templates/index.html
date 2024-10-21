@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--Ejecutar la aplicación  python app.py-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="generate-form">
+            <div class="login-box">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/icono.webp') }}" alt="Logo">
+                </div>
+                <h2>Generador de Códigos QR</h2>
+                <form action="/" method="POST" enctype="multipart/form-data" class="login-form">
+                    <div class="input-group">
+                        <input type="text" id="url" name="url" placeholder="Ingresa la URL">
+                    </div>
+                    <br><br>
+                    <label for="file">O carga un archivo Excel con la siguiente <a href="registrar2.html">plantilla</a></label>
+                    <input type="file" id="file" name="file" accept=".xlsx" class="load-text">
+                    <br><br>
+                    <button type="submit" class="btn">Generar QR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

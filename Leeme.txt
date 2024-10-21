@@ -1,0 +1,2 @@
+Para ejecutar abrir consola y ejecutar
+python app.py

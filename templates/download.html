@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar QR</title>
+</head>
+<body>
+    <h1>Códigos QR generados</h1>
+    <ul>
+        {% for image in images %}
+            <li><a href="{{ url_for('static', filename='qr_codes/' + image) }}" download>{{ image }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
